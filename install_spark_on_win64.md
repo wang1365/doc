@@ -87,3 +87,8 @@ In [4]: ft = textFile.filter(lambda line: '32.033' in line)
 In [5]: ft.count()
 Out[5]: 167903
 ```
+
+* Run `pyspark` in Python shell or IDE
+There is no isolate `pyspark` in PyPI, we cannot install it via `pip`, there are 2 solutions:
+1. Copy `"%SPARK_HOME%\python\spark"` folder to Python's site-packages folder, e.g. `"C:\Python27\Lib\site-packages\"`
+2. Add `PYTHONPATH` env, and set its value to `%SPARK_HOME%\python\spark;%PYTHONPATH%`
